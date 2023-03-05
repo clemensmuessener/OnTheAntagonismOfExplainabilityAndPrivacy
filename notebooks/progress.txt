@@ -1,0 +1,18 @@
+2023-02-27 18:27:05.215563: Dataset heart, model decision tree, precision 1.0, recall 1.0.
+2023-02-27 18:33:37.789727: Dataset heart, model random forest, precision 1.0, recall 1.0.
+2023-02-27 18:41:39.528303: Dataset heart, model neural network, precision 1.0, recall 1.0.
+2023-02-27 18:41:44.668075: Dataset heart numeric, model decision tree, precision 1.0, recall 1.0.
+2023-02-27 18:41:52.972489: Dataset heart numeric, model random forest, precision 1.0, recall 1.0.
+2023-02-27 18:42:08.056156: Dataset heart numeric, model neural network, precision 1.0, recall 1.0.
+2023-02-27 18:47:03.548998: Dataset heart categorical, model decision tree, precision 0.9958333333333333, recall 1.0.
+2023-02-27 19:18:11.080195: Dataset heart categorical, model random forest, precision 1.0, recall 1.0.
+2023-02-27 19:28:39.442218: Dataset heart categorical, model neural network, precision 1.0, recall 1.0.
+2023-03-02 19:00:41.463128: Dataset census, model decision tree, precision 0.9989884393063584, recall 1.0.
+2023-03-04 05:11:37.718534: Dataset census, model random forest, precision 1.0, recall 1.0.
+2023-03-04 08:22:17.957705: Dataset census, model neural network, precision 1.0, recall 1.0.
+2023-03-04 08:26:40.861646: Dataset census numeric, model random forest, precision 0.9636363636363636, recall 1.0.
+2023-03-04 08:29:15.150790: Dataset census numeric, model neural network, precision 0.8237618545837724, recall 1.0.
+2023-03-04 17:03:29.912140: Dataset census categorical, model random forest, precision 1.0, recall 1.0.
+2023-03-04 19:28:23.529824: Dataset census categorical, model neural network, precision 1.0, recall 1.0.
+2023-03-05 12:07:27.291829: Dataset census numeric, model decision tree, precision 0.978716744913928, recall 1.0.
+2023-03-05 13:20:24.085990: Dataset census categorical, model decision tree, precision 0.9998045729919874, recall 1.0.
