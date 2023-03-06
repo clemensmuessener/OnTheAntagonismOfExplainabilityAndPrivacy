@@ -246,7 +246,7 @@ class XaiPrivacyExperiment():
         self.rng = np.random.default_rng(random_state)
         random.seed(random_state)
 
-        self.data = data
+        self.data = data.sample(frac=1, random_state=self.rng)
         self.numeric_features = numeric_features
         self.outcome_name = outcome_name
 
@@ -810,13 +810,19 @@ class TrainingDataExtraction(XaiPrivacyExperiment):
 
 
 def run_all_experiments(experiment, dataset_dicts, model_dicts, random_state, num_queries, model_access, threads,
-                        results_table, is_mem_inf=True, convert_cat_to_str=False):
+                        is_mem_inf=True, convert_cat_to_str=False, repeat=10):
+    results_ = {'dataset': [], 'model': [], 'repetition': [], 'accuracy': [], 'precision': [], 'recall': []}
+
+    results_table = pd.DataFrame(data=results_)
+
     if type(num_queries) is dict:
         num_queries_dict = num_queries
     else:
         num_queries_dict = {}
         for dataset_dict in dataset_dicts:
             num_queries_dict[dataset_dict['name']] = num_queries
+
+    rng = np.random.default_rng(random_state)
 
     for dataset_dict in dataset_dicts:
         # DiCE needs categorical features to be strings
@@ -828,25 +834,25 @@ def run_all_experiments(experiment, dataset_dicts, model_dicts, random_state, nu
         for model_dict in model_dicts:
             dataset_name = dataset_dict['name']
             model_name = model_dict['name']
-            print(f'dataset: {dataset_name}, model: {model_name}')
 
-            EXP = experiment(dataset_dict['dataset'], dataset_dict['num'], dataset_dict['outcome'],
-                             random_state=random_state)
+            for i in range(repeat):
+                print(f'dataset: {dataset_name}, model: {model_name} (repetition {i})')
 
-            if is_mem_inf:
-                accuracy, precision, recall = EXP.membership_inference_experiment(
-                    num_queries=num_queries_dict[dataset_name], model=model_dict['model'](random_state=random_state),
-                    model_access=model_access, threads=threads)
-                results_table.loc[len(results_table.index)] = [dataset_name, model_name, accuracy, precision, recall]
-            else:
-                precision, recall = EXP.training_data_extraction_experiment(num_queries=num_queries_dict[dataset_name],
-                                                                            model=model_dict['model'](
-                                                                                random_state=random_state),
-                                                                            model_access=model_access, threads=threads)
-                results_table.loc[len(results_table.index)] = [dataset_name, model_name, precision, recall]
+                EXP = experiment(dataset_dict['dataset'], dataset_dict['num'], dataset_dict['outcome'],
+                                 random_state=rng.integers(1000))
 
-            with open("progress.txt", mode='a') as file:
-                file.write(
-                    f'{datetime.datetime.now()}: Dataset {dataset_name}, model {model_name}, precision {precision}, recall {recall}.\n')
+                if is_mem_inf:
+                    accuracy, precision, recall = EXP.membership_inference_experiment(
+                        num_queries=num_queries_dict[dataset_name], model=model_dict['model'](random_state=rng.integers(1000)),
+                        model_access=model_access, threads=threads)
+                else:
+                    accuracy = -1.0
+                    precision, recall = EXP.training_data_extraction_experiment(num_queries=num_queries_dict[dataset_name],
+                                                                                model=model_dict['model'](
+                                                                                    random_state=rng.integers(1000)),
+                                                                                model_access=model_access, threads=threads)
+                results_table.loc[len(results_table.index)] = [dataset_name, model_name, i, accuracy, precision, recall]
+
+                results_table.to_csv('cache.csv', index=False, na_rep='NaN', float_format='%.3f')
 
     return results_table
