@@ -1,3 +1,5 @@
+from dice_ml.utils.exception import UserConfigValidationException
+
 from experiment_setup import MembershipInference, TrainingDataExtraction
 import dice_ml
 import numpy as np
@@ -29,7 +31,10 @@ class CounterfactualMembershipInference(MembershipInference):
         cfs_per_query = 4
 
         # get first counterfactuals for all given samples
-        e1 = explainer.generate_counterfactuals(samples_df, total_CFs=cfs_per_query, desired_class='opposite')
+        try:
+            e1 = explainer.generate_counterfactuals(samples_df, total_CFs=cfs_per_query, desired_class='opposite')
+        except UserConfigValidationException:
+            return inferred_membership
 
         # collect all first counterfactuals in this dataframe to plug it into the explainer once more
         first_cfs_all = pd.DataFrame(columns=samples_df.columns)
@@ -52,7 +57,10 @@ class CounterfactualMembershipInference(MembershipInference):
         respective_sample_index = np.array(respective_sample_index)
 
         # get second counterfactuals for all first counterfactuals
-        e2 = explainer.generate_counterfactuals(first_cfs_all, total_CFs=cfs_per_query, desired_class='opposite')
+        try:
+            e2 = explainer.generate_counterfactuals(first_cfs_all, total_CFs=cfs_per_query, desired_class='opposite')
+        except UserConfigValidationException:
+            return inferred_membership
 
         # compare all second counterfactuals with the samples they were generated for
         for i, second_cfs_obj in enumerate(e2.cf_examples_list):
