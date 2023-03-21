@@ -1,19 +1,181 @@
-dataset,model,accuracy,precision,recall
-heart,decision tree,0.849,1.000,0.700
-heart,random forest,0.849,1.000,0.700
-heart,neural network,0.812,1.000,0.627
-heart numeric,decision tree,0.859,1.000,0.721
-heart numeric,random forest,0.859,1.000,0.721
-heart numeric,neural network,0.802,1.000,0.607
-heart categorical,decision tree,0.836,1.000,0.673
-heart categorical,random forest,0.836,1.000,0.673
-heart categorical,neural network,0.799,1.000,0.600
-census,decision tree,0.696,1.000,0.393
-census,random forest,0.696,1.000,0.393
-census,neural network,0.665,1.000,0.330
-census numeric,decision tree,0.717,1.000,0.434
-census numeric,random forest,0.718,1.000,0.435
-census numeric,neural network,0.634,1.000,0.269
-census categorical,decision tree,0.711,1.000,0.422
-census categorical,random forest,0.711,1.000,0.422
-census categorical,neural network,0.704,1.000,0.408
+dataset,model,repetition,accuracy,precision,recall
+heart,decision tree,0,0.847,1.000,0.695
+heart,decision tree,1,0.853,1.000,0.709
+heart,decision tree,2,0.849,1.000,0.702
+heart,decision tree,3,0.867,1.000,0.736
+heart,decision tree,4,0.858,1.000,0.717
+heart,decision tree,5,0.850,1.000,0.702
+heart,decision tree,6,0.846,1.000,0.692
+heart,decision tree,7,0.836,1.000,0.676
+heart,decision tree,8,0.861,1.000,0.724
+heart,decision tree,9,0.837,1.000,0.678
+heart,random forest,0,0.854,1.000,0.709
+heart,random forest,1,0.865,1.000,0.734
+heart,random forest,2,0.843,1.000,0.692
+heart,random forest,3,0.854,1.000,0.712
+heart,random forest,4,0.869,1.000,0.741
+heart,random forest,5,0.845,1.000,0.692
+heart,random forest,6,0.880,1.000,0.763
+heart,random forest,7,0.850,1.000,0.702
+heart,random forest,8,0.848,1.000,0.697
+heart,random forest,9,0.863,1.000,0.729
+heart,neural network,0,0.822,1.000,0.646
+heart,neural network,1,0.827,1.000,0.659
+heart,neural network,2,0.814,1.000,0.632
+heart,neural network,3,0.834,1.000,0.671
+heart,neural network,4,0.813,1.000,0.630
+heart,neural network,5,0.821,1.000,0.644
+heart,neural network,6,0.825,1.000,0.654
+heart,neural network,7,0.788,1.000,0.581
+heart,neural network,8,0.821,1.000,0.649
+heart,neural network,9,0.828,1.000,0.659
+heart numeric,decision tree,0,0.836,1.000,0.675
+heart numeric,decision tree,1,0.884,1.000,0.769
+heart numeric,decision tree,2,0.847,1.000,0.697
+heart numeric,decision tree,3,0.853,1.000,0.711
+heart numeric,decision tree,4,0.856,1.000,0.716
+heart numeric,decision tree,5,0.887,1.000,0.774
+heart numeric,decision tree,6,0.848,1.000,0.699
+heart numeric,decision tree,7,0.858,1.000,0.718
+heart numeric,decision tree,8,0.870,1.000,0.743
+heart numeric,decision tree,9,0.864,1.000,0.731
+heart numeric,random forest,0,0.870,1.000,0.743
+heart numeric,random forest,1,0.859,1.000,0.721
+heart numeric,random forest,2,0.860,1.000,0.721
+heart numeric,random forest,3,0.872,1.000,0.748
+heart numeric,random forest,4,0.848,1.000,0.697
+heart numeric,random forest,5,0.856,1.000,0.716
+heart numeric,random forest,6,0.858,1.000,0.721
+heart numeric,random forest,7,0.855,1.000,0.711
+heart numeric,random forest,8,0.858,1.000,0.716
+heart numeric,random forest,9,0.859,1.000,0.721
+heart numeric,neural network,0,0.775,1.000,0.553
+heart numeric,neural network,1,0.748,1.000,0.502
+heart numeric,neural network,2,0.795,1.000,0.595
+heart numeric,neural network,3,0.813,1.000,0.629
+heart numeric,neural network,4,0.815,1.000,0.636
+heart numeric,neural network,5,0.805,1.000,0.612
+heart numeric,neural network,6,0.795,1.000,0.597
+heart numeric,neural network,7,0.775,1.000,0.551
+heart numeric,neural network,8,0.807,1.000,0.621
+heart numeric,neural network,9,0.749,1.000,0.505
+heart categorical,decision tree,0,0.817,1.000,0.637
+heart categorical,decision tree,1,0.796,1.000,0.593
+heart categorical,decision tree,2,0.805,1.000,0.612
+heart categorical,decision tree,3,0.836,1.000,0.673
+heart categorical,decision tree,4,0.834,1.000,0.668
+heart categorical,decision tree,5,0.811,1.000,0.624
+heart categorical,decision tree,6,0.813,1.000,0.627
+heart categorical,decision tree,7,0.827,1.000,0.656
+heart categorical,decision tree,8,0.816,1.000,0.632
+heart categorical,decision tree,9,0.811,1.000,0.624
+heart categorical,random forest,0,0.814,1.000,0.629
+heart categorical,random forest,1,0.808,1.000,0.617
+heart categorical,random forest,2,0.833,1.000,0.668
+heart categorical,random forest,3,0.836,1.000,0.673
+heart categorical,random forest,4,0.829,1.000,0.659
+heart categorical,random forest,5,0.835,1.000,0.671
+heart categorical,random forest,6,0.825,1.000,0.651
+heart categorical,random forest,7,0.805,1.000,0.610
+heart categorical,random forest,8,0.810,1.000,0.624
+heart categorical,random forest,9,0.833,1.000,0.666
+heart categorical,neural network,0,0.800,1.000,0.602
+heart categorical,neural network,1,0.788,1.000,0.578
+heart categorical,neural network,2,0.791,1.000,0.583
+heart categorical,neural network,3,0.807,1.000,0.617
+heart categorical,neural network,4,0.820,1.000,0.641
+heart categorical,neural network,5,0.807,1.000,0.617
+heart categorical,neural network,6,0.822,1.000,0.646
+heart categorical,neural network,7,0.799,1.000,0.600
+heart categorical,neural network,8,0.793,1.000,0.588
+heart categorical,neural network,9,0.804,1.000,0.610
+census,decision tree,0,0.689,1.000,0.377
+census,decision tree,1,0.696,1.000,0.392
+census,decision tree,2,0.695,1.000,0.390
+census,decision tree,3,0.702,1.000,0.404
+census,decision tree,4,0.699,1.000,0.398
+census,decision tree,5,0.700,1.000,0.401
+census,decision tree,6,0.694,1.000,0.389
+census,decision tree,7,0.698,1.000,0.395
+census,decision tree,8,0.698,1.000,0.396
+census,decision tree,9,0.699,1.000,0.398
+census,random forest,0,0.695,1.000,0.390
+census,random forest,1,0.702,1.000,0.403
+census,random forest,2,0.697,1.000,0.394
+census,random forest,3,0.698,1.000,0.397
+census,random forest,4,0.690,1.000,0.379
+census,random forest,5,0.697,1.000,0.394
+census,random forest,6,0.701,1.000,0.402
+census,random forest,7,0.698,1.000,0.396
+census,random forest,8,0.698,1.000,0.396
+census,random forest,9,0.702,1.000,0.404
+census,neural network,0,0.666,1.000,0.332
+census,neural network,1,0.672,1.000,0.344
+census,neural network,2,0.676,1.000,0.351
+census,neural network,3,0.678,1.000,0.356
+census,neural network,4,0.674,1.000,0.349
+census,neural network,5,0.673,1.000,0.346
+census,neural network,6,0.674,1.000,0.348
+census,neural network,7,0.663,1.000,0.326
+census,neural network,8,0.677,1.000,0.354
+census,neural network,9,0.685,1.000,0.370
+census numeric,decision tree,0,0.736,1.000,0.472
+census numeric,decision tree,1,0.722,1.000,0.443
+census numeric,decision tree,2,0.724,1.000,0.449
+census numeric,decision tree,3,0.729,1.000,0.457
+census numeric,decision tree,4,0.731,1.000,0.462
+census numeric,decision tree,5,0.724,1.000,0.447
+census numeric,decision tree,6,0.727,1.000,0.455
+census numeric,decision tree,7,0.728,1.000,0.456
+census numeric,decision tree,8,0.728,1.000,0.456
+census numeric,decision tree,9,0.717,1.000,0.435
+census numeric,random forest,0,0.724,1.000,0.447
+census numeric,random forest,1,0.726,1.000,0.452
+census numeric,random forest,2,0.730,1.000,0.461
+census numeric,random forest,3,0.732,1.000,0.464
+census numeric,random forest,4,0.725,1.000,0.450
+census numeric,random forest,5,0.725,1.000,0.449
+census numeric,random forest,6,0.725,1.000,0.451
+census numeric,random forest,7,0.725,1.000,0.451
+census numeric,random forest,8,0.731,1.000,0.462
+census numeric,random forest,9,0.735,1.000,0.469
+census numeric,neural network,0,0.638,1.000,0.277
+census numeric,neural network,1,0.647,1.000,0.293
+census numeric,neural network,2,0.629,1.000,0.258
+census numeric,neural network,3,0.643,1.000,0.286
+census numeric,neural network,4,0.640,1.000,0.280
+census numeric,neural network,5,0.643,1.000,0.286
+census numeric,neural network,6,0.646,1.000,0.292
+census numeric,neural network,7,0.645,1.000,0.290
+census numeric,neural network,8,0.639,1.000,0.278
+census numeric,neural network,9,0.639,1.000,0.278
+census categorical,decision tree,0,0.706,1.000,0.412
+census categorical,decision tree,1,0.707,1.000,0.414
+census categorical,decision tree,2,0.705,1.000,0.411
+census categorical,decision tree,3,0.708,1.000,0.415
+census categorical,decision tree,4,0.703,1.000,0.406
+census categorical,decision tree,5,0.700,1.000,0.401
+census categorical,decision tree,6,0.706,1.000,0.413
+census categorical,decision tree,7,0.702,1.000,0.404
+census categorical,decision tree,8,0.704,1.000,0.407
+census categorical,decision tree,9,0.706,1.000,0.412
+census categorical,random forest,0,0.705,1.000,0.410
+census categorical,random forest,1,0.703,1.000,0.406
+census categorical,random forest,2,0.709,1.000,0.419
+census categorical,random forest,3,0.700,1.000,0.400
+census categorical,random forest,4,0.709,1.000,0.418
+census categorical,random forest,5,0.709,1.000,0.419
+census categorical,random forest,6,0.708,1.000,0.417
+census categorical,random forest,7,0.708,1.000,0.415
+census categorical,random forest,8,0.708,1.000,0.417
+census categorical,random forest,9,0.706,1.000,0.412
+census categorical,neural network,0,0.694,1.000,0.388
+census categorical,neural network,1,0.693,1.000,0.385
+census categorical,neural network,2,0.693,1.000,0.386
+census categorical,neural network,3,0.694,1.000,0.389
+census categorical,neural network,4,0.692,1.000,0.384
+census categorical,neural network,5,0.692,1.000,0.384
+census categorical,neural network,6,0.683,1.000,0.367
+census categorical,neural network,7,0.688,1.000,0.377
+census categorical,neural network,8,0.687,1.000,0.375
+census categorical,neural network,9,0.697,1.000,0.393
