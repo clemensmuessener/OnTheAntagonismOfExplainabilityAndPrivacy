@@ -1,0 +1,20 @@
+dataset,model,accuracy,accuracy,precision,precision,recall,recall
+,,mean,std,mean,std,mean,std
+census,decision tree,0.707,0.003,1.000,0.000,0.415,0.005
+census,neural network,0.683,0.012,1.000,0.000,0.366,0.025
+census,random forest,0.708,0.003,1.000,0.000,0.416,0.006
+census categorical,decision tree,0.709,0.003,1.000,0.000,0.419,0.006
+census categorical,neural network,0.703,0.003,1.000,0.000,0.406,0.005
+census categorical,random forest,0.710,0.003,1.000,0.000,0.421,0.005
+census numeric,decision tree,0.740,0.005,1.000,0.000,0.480,0.010
+census numeric,neural network,0.656,0.013,1.000,0.000,0.312,0.026
+census numeric,random forest,0.738,0.006,1.000,0.000,0.476,0.012
+heart,decision tree,0.850,0.012,1.000,0.000,0.707,0.023
+heart,neural network,0.835,0.019,1.000,0.000,0.677,0.036
+heart,random forest,0.868,0.019,1.000,0.000,0.742,0.036
+heart categorical,decision tree,0.842,0.013,1.000,0.000,0.686,0.027
+heart categorical,neural network,0.842,0.014,1.000,0.000,0.688,0.028
+heart categorical,random forest,0.834,0.014,1.000,0.000,0.670,0.029
+heart numeric,decision tree,0.866,0.020,1.000,0.000,0.736,0.039
+heart numeric,neural network,0.811,0.013,1.000,0.000,0.630,0.024
+heart numeric,random forest,0.854,0.017,1.000,0.000,0.712,0.035
