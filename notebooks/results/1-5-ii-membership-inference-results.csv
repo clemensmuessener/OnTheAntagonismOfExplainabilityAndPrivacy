@@ -1,3 +1,0 @@
-dataset,model,accuracy,precision,recall
-numeric,neural network,0.505,1.000,0.010
-categorical,neural network,1.000,1.000,1.000
